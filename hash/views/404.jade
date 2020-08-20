@@ -1,0 +1,50 @@
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='stylesheets/bootstrap-custom.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+		title Error 404
+		style.
+			html,
+			body {
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+			background-color: #F7F8FB;
+			height: 100%;
+			-webkit-font-smoothing: antialiased;
+			}
+
+			.message {
+			text-align: center;
+			align-self: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0px 20px;
+			max-width: 450px;
+			}
+			.message__title {
+			font-size: 22px;
+			font-weight: 100;
+			margin-top: 15px;
+			color: #47494E;
+			margin-bottom: 8px;
+			}
+			p {
+			-webkit-margin-after: 0px;
+			-webkit-margin-before: 0px;
+			font-size: 15px;
+			color: #7F828B;
+			line-height: 21px;
+			margin-bottom: 4px;
+			white-space:nowrap;
+			}
+	body
+		center
+			.spacer
+			.message
+				.message__title 404. That’s an error.
+				p The requested URL was not found on this server.

